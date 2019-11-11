@@ -1,0 +1,55 @@
+html{
+    font-size: calc(100/1920*100vw);
+}
+.activeClass{color: salmon}
+
+each(range(5,10,5),{
+    .margin-t@{value} {
+        margin-top: (@value * 1px);
+    }
+    .margin-r@{value} {
+        margin-right: (@value * 1px);
+    }
+    .margin-b@{value} {
+        margin-bottom: (@value * 1px);
+    }
+    .margin-l@{value} {
+        margin-left: (@value * 1px);
+    }
+
+    .padding-t@{value} {
+        padding-top: (@value * 1px);
+    }
+    .padding-r@{value} {
+        padding-right: (@value * 1px);
+    }
+    .padding-b@{value} {
+        padding-bottom: (@value * 1px);
+    }
+    .padding-l@{value} {
+        padding-left: (@value * 1px);
+    }
+})
+
+@colors: red,orange,yellow, green, cyan, blue, violet, white, black, gray, #ccc;
+each(@colors, {
+    .bg-@{value} {
+        background-color: @value;
+    }
+    .color-@{value} {
+        color: @value;
+    }
+})
+
+.fl{float: left;}
+.fr{float: right;}
+.cb{clear: both;}
+.clearfix{
+    zoom:1;
+    &::after{
+        content:"";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
