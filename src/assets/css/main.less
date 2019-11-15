@@ -1,100 +1,246 @@
 /* 初始化 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-html{
+
+html {
     font-size: calc(100/720*100vw);
 }
 
 
-.activeClass{color: salmon}
+.activeClass {
+    color: salmon
+}
 
-each(range(5,10,5),{
-    .margin-t@{value} {
-        margin-top: (@value * 1px);
-    }
-    .margin-r@{value} {
-        margin-right: (@value * 1px);
-    }
-    .margin-b@{value} {
-        margin-bottom: (@value * 1px);
-    }
-    .margin-l@{value} {
-        margin-left: (@value * 1px);
+each(range(5, 10, 5), {
+        .margin-t@{value} {
+            margin-top: (@value * 1px);
+        }
+
+        .margin-r@{value} {
+            margin-right: (@value * 1px);
+        }
+
+        .margin-b@{value} {
+            margin-bottom: (@value * 1px);
+        }
+
+        .margin-l@{value} {
+            margin-left: (@value * 1px);
+        }
+
+        .padding-t@{value} {
+            padding-top: (@value * 1px);
+        }
+
+        .padding-r@{value} {
+            padding-right: (@value * 1px);
+        }
+
+        .padding-b@{value} {
+            padding-bottom: (@value * 1px);
+        }
+
+        .padding-l@{value} {
+            padding-left: (@value * 1px);
+        }
     }
 
-    .padding-t@{value} {
-        padding-top: (@value * 1px);
-    }
-    .padding-r@{value} {
-        padding-right: (@value * 1px);
-    }
-    .padding-b@{value} {
-        padding-bottom: (@value * 1px);
-    }
-    .padding-l@{value} {
-        padding-left: (@value * 1px);
-    }
-})
+) @colors: red, orange, yellow, green, cyan, blue, violet, white, black, gray, #ccc;
 
-@colors: red,orange,yellow, green, cyan, blue, violet, white, black, gray, #ccc;
 each(@colors, {
-    .bg-@{value} {
-        background-color: @value;
-    }
-    .color-@{value} {
-        color: @value;
-    }
-})
+        .bg-@{value} {
+            background-color: @value;
+        }
 
-.fl{float: left;}
-.fr{float: right;}
-.cb{clear: both;}
-.clearfix{
-    zoom:1;
-    &::after{
-        content:"";
+        .color-@{value} {
+            color: @value;
+        }
+    }
+
+) .fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.cb {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+
+    &::after {
+        content: "";
         display: block;
         height: 0;
         clear: both;
     }
 }
+
+// tabs
+.y-tab{
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 0 6px 1px #eee;
+    background-color: hsla(0,0%,100%,.8);
+}
+.y-tab-active {
+    color: #108ee9;
+}
+
+.y-tab-list {
+    
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 0;
+    padding: 14px 10px;
+    min-width: 100%;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: 360ms;
+    >.y-tab-item{
+        margin-left: 0.2rem;
+        padding: 0 0.1rem;
+    }
+}
+.y-vertical{
+    width: 50px;
+    height: 100%;
+    flex-direction: column;
+}
+
+

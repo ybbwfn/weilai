@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter  as Router, Route, Switch } from 'react-router-dom'
 import store from '@/store'
 import server from '@/until/server.js'
 import '@/assets/css/main.less'
