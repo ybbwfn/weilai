@@ -132,8 +132,6 @@ table {
 html {
     font-size: calc(100/720*100vw);
 }
-
-
 .activeClass {
     color: salmon
 }
@@ -207,40 +205,6 @@ each(@colors, {
     }
 }
 
-// tabs
-.y-tab{
-    min-width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 0 6px 1px #eee;
-    background-color: hsla(0,0%,100%,.8);
-}
-.y-tab-active {
-    color: #108ee9;
-}
 
-.y-tab-list {
-    
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    flex-shrink: 0;
-    padding: 14px 10px;
-    min-width: 100%;
-    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-duration: 360ms;
-    >.y-tab-item{
-        margin-left: 0.2rem;
-        padding: 0 0.1rem;
-    }
-}
-.y-vertical{
-    width: 50px;
-    height: 100%;
-    flex-direction: column;
-}
 
 

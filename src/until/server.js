@@ -1,5 +1,5 @@
 import qs from 'qs'
-import '@/mock/shopList'
+
 const axios = require('axios')
 axios.default.timeout = 5000
 // axios.default.baseUrl = '/api'

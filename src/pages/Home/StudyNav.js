@@ -1,4 +1,5 @@
 import React from 'react'
+import './StudyNav.less'
 
 function StudyNav(){
     return <ul className="studyNav">

@@ -1,0 +1,143 @@
+{
+	"oneOf": [{
+		"test": [{}, {}, {}, {}],
+		"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\url-loader\\dist\\cjs.js",
+		"options": {
+			"limit": 10000,
+			"name": "static/media/[name].[hash:8].[ext]"
+		}
+	}, {
+		"test": {},
+		"include": "C:\\software\\wamp\\www\\xiaoD\\src",
+		"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\babel-loader\\lib\\index.js",
+		"options": {
+			"customize": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\babel-preset-react-app\\webpack-overrides.js",
+			"babelrc": false,
+			"configFile": false,
+			"presets": ["C:\\software\\wamp\\www\\xiaoD\\node_modules\\babel-preset-react-app\\index.js"],
+			"cacheIdentifier": "development:babel-plugin-named-asset-import@0.3.4:babel-preset-react-app@9.0.2:react-dev-utils@9.1.0:react-scripts@3.1.2",
+			"plugins": [
+				["C:\\software\\wamp\\www\\xiaoD\\node_modules\\babel-plugin-named-asset-import\\index.js", {
+					"loaderMap": {
+						"svg": {
+							"ReactComponent": "@svgr/webpack?-svgo,+titleProp,+ref![path]"
+						}
+					}
+				}]
+			],
+			"cacheDirectory": true,
+			"cacheCompression": false,
+			"compact": false
+		}
+	}, {
+		"test": {},
+		"exclude": {},
+		"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\babel-loader\\lib\\index.js",
+		"options": {
+			"babelrc": false,
+			"configFile": false,
+			"compact": false,
+			"presets": [
+				["C:\\software\\wamp\\www\\xiaoD\\node_modules\\babel-preset-react-app\\dependencies.js", {
+					"helpers": true
+				}]
+			],
+			"cacheDirectory": true,
+			"cacheCompression": false,
+			"cacheIdentifier": "development:babel-plugin-named-asset-import@0.3.4:babel-preset-react-app@9.0.2:react-dev-utils@9.1.0:react-scripts@3.1.2",
+			"sourceMaps": false
+		}
+	}, {
+		"test": {},
+		"exclude": {},
+		"use": ["C:\\software\\wamp\\www\\xiaoD\\node_modules\\style-loader\\dist\\index.js", {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\css-loader\\dist\\cjs.js",
+			"options": {
+				"importLoaders": 1,
+				"sourceMap": false
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\postcss-loader\\src\\index.js",
+			"options": {
+				"ident": "postcss",
+				"sourceMap": false
+			}
+		}],
+		"sideEffects": true
+	}, {
+		"test": {},
+		"use": ["C:\\software\\wamp\\www\\xiaoD\\node_modules\\style-loader\\dist\\index.js", {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\css-loader\\dist\\cjs.js",
+			"options": {
+				"importLoaders": 1,
+				"sourceMap": false,
+				"modules": true
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\postcss-loader\\src\\index.js",
+			"options": {
+				"ident": "postcss",
+				"sourceMap": false
+			}
+		}]
+	}, {
+		"test": {},
+		"exclude": {},
+		"use": ["C:\\software\\wamp\\www\\xiaoD\\node_modules\\style-loader\\dist\\index.js", {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\css-loader\\dist\\cjs.js",
+			"options": {
+				"importLoaders": 2,
+				"sourceMap": false
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\postcss-loader\\src\\index.js",
+			"options": {
+				"ident": "postcss",
+				"sourceMap": false
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\resolve-url-loader\\index.js",
+			"options": {
+				"sourceMap": false
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\sass-loader\\lib\\loader.js",
+			"options": {
+				"sourceMap": true
+			}
+		}],
+		"sideEffects": true
+	}, {
+		"test": {},
+		"use": ["C:\\software\\wamp\\www\\xiaoD\\node_modules\\style-loader\\dist\\index.js", {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\css-loader\\dist\\cjs.js",
+			"options": {
+				"importLoaders": 2,
+				"sourceMap": false,
+				"modules": true
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\postcss-loader\\src\\index.js",
+			"options": {
+				"ident": "postcss",
+				"sourceMap": false
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\resolve-url-loader\\index.js",
+			"options": {
+				"sourceMap": false
+			}
+		}, {
+			"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\sass-loader\\lib\\loader.js",
+			"options": {
+				"sourceMap": true
+			}
+		}]
+	}, {
+		"loader": "C:\\software\\wamp\\www\\xiaoD\\node_modules\\file-loader\\dist\\cjs.js",
+		"exclude": [{}, {}, {}],
+		"options": {
+			"name": "static/media/[name].[hash:8].[ext]"
+		}
+	}]
+}

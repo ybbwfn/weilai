@@ -22,8 +22,9 @@
   },
   "homepage": ".",
   "scripts": {
-    "start": "set PORT=8888&&react-app-rewired start ",
-    "build": "react-app-rewired build",
+    "start": "set PORT=8888&&react-app-rewired start --env=development ",
+    "dev": "set PORT=8888&&react-app-rewired start --env=dev ",
+    "build": "react-app-rewired build --env=production",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -47,6 +48,7 @@
     "http-proxy-middleware": "^0.20.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "mockjs": "^1.1.0"
+    "mockjs": "^1.1.0",
+    "node-sass": "^4.13.0"
   }
 }

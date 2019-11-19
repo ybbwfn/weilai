@@ -28,6 +28,19 @@ const shopList2 = Mock.mock('/api/shopList2','post',{
   })
 
 //热门视频
+const getAllVideo = Mock.mock('/api/getAllVideo','post',{
+    success: true,
+    message: 'success',
+    'list|8-20': [{
+        'sid|+1': 1,
+        'title':'@cparagraph',
+        'img': Random.image(),
+        'url': Random.image('200x100', '#02adea', 'Hello'),
+        'level|1-3': 1,
+        "price|1-100.2": 1
+    }]
+  })
+//热门视频
 const getHotVideo = Mock.mock('/api/getHotVideo','post',{
     success: true,
     message: 'success',
@@ -70,6 +83,13 @@ const getRecommend = Mock.mock('/api/getRecommend','post',{
   })
 
 
-export default {
-    shopList, shopList2, getHotVideo, getNewVideo, getRecommend,
-}
+  let mockData = {};
+  if( process.env.NODE_ENV == "development"){
+    mockData = {
+        shopList, shopList2, getHotVideo, getNewVideo, getRecommend, getAllVideo, 
+    }
+  }else{
+    mockData ={}
+  }
+  export default mockData;
+

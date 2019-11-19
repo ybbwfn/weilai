@@ -1,6 +1,8 @@
 // module.exports = function override(config, env) {
+    
 //     // do stuff with the webpack config...
 //     console.log(config)
+//     console.log(JSON.stringify(config) )
 //     return config;
 // };
 
@@ -20,6 +22,7 @@ module.exports = override(
             '@default-color':"#ccc"
         }
     }),
+    
     //配置支持高阶组件装饰器写法
     addBabelPlugins( // 支持装饰器
         [
