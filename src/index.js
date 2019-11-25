@@ -10,6 +10,7 @@ import '@/assets/css/page.less'
 import MainLayout from '@/layout/MainLayout'
 import { mainRouter, otherRouter } from '@/router'
 import '@/mock/shopList'
+// import $ from 'jquery'
 
 
 window.$axios = server;
